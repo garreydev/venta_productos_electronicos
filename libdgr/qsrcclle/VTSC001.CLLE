@@ -1,0 +1,17 @@
+/*----------------------------------------------------------------------------*/
+/* @name.....: VTSC001                                                        */
+/* @version..: ID-001                                                         */
+/* @author...: Danny García Reyes                                             */
+/* @since....: Febrero 2023                                                   */
+/* @objective: Lee el archivo de mensajes con el código de mensaje y devuelve */
+/*             la descripción del mensaje.                                    */
+/*----------------------------------------------------------------------------*/
+ INICIO:     PGM        PARM(&ARCHIVO &CODIGO &MENSAJE)
+
+             DCL        VAR(&ARCHIVO) TYPE(*CHAR) LEN(10)
+             DCL        VAR(&CODIGO) TYPE(*CHAR) LEN(7)
+             DCL        VAR(&MENSAJE) TYPE(*CHAR) LEN(80)
+
+             RTVMSG     MSGID(&CODIGO) MSGF(*LIBL/&ARCHIVO) MSG(&MENSAJE)
+
+ FINAL:      ENDPGM

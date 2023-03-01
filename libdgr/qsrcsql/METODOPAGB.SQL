@@ -1,0 +1,67 @@
+--==============================================================================
+-- Nombre de la tabla:
+--   METODOPAGB
+-- Descripción:
+--   Bitácora de la Tabla de Métodos de Pago.
+-- Objetivo:
+--   Almacenar los cambios realizados en la tabla de métodos de pago, los cuales
+--   pueden ser: inserción, actualización o eliminación.
+-- Tipo de tabla:
+--   Bitácora
+-- Origen de los datos:
+--   Se ingresa un registro cuando se realiza un cambio en la tabla de métodos
+--   de pago.
+--==============================================================================
+-- Cambios Realizados
+--   - No Cambio....: ID-001
+--   - Responsable..: Danny García Reyes
+--   - Fecha........: Febrero 2023
+--   - Observaciones: Creación de la tabla.
+--==============================================================================
+CREATE TABLE METODOPAGB (
+  CODIGO         FOR COLUMN BMEPCODIGO CHAR(3)   NOT NULL,
+  FECHA_EVENTO   FOR COLUMN BMEPFECEVN TIMESTAMP NOT NULL,
+  DESCRIPCION    FOR COLUMN BMEPDESCRI CHAR(30)  NOT NULL WITH DEFAULT '',
+  DETALLE        FOR COLUMN BMEPDETALE CHAR(50)  NOT NULL WITH DEFAULT '',
+  TIPO_EVENTO    FOR COLUMN BMEPTIPEVN CHAR(1)   NOT NULL WITH DEFAULT 'I',
+  USUARIO_EVENTO FOR COLUMN BMEPUSUEVN CHAR(18)  NOT NULL WITH DEFAULT USER,
+  CONSTRAINT BMEPTIPEVN_CHK_CST CHECK (BMEPTIPEVN IN ('I', 'A', 'E')),
+  CONSTRAINT METODOPAGB_PK PRIMARY KEY (BMEPCODIGO, BMEPFECEVN)
+) RCDFMT RETODOPAGB;
+
+RENAME TABLE METODOPAGB TO BITACORA_TABLA_DE_METODOS_DE_PAGO
+  FOR SYSTEM NAME METODOPAGB;
+
+LABEL ON TABLE METODOPAGB IS 'BITACORA DE TABLA DE METODOS DE PAGO';
+
+COMMENT ON TABLE METODOPAGB IS 'BITACORA DE TABLA DE METODOS DE PAGO';
+
+-- Headers
+LABEL ON COLUMN METODOPAGB (
+  BMEPCODIGO IS 'CODIGO',
+  BMEPFECEVN IS 'FECHA EVENTO',
+  BMEPDESCRI IS 'DESCRIPCION',
+  BMEPDETALE IS 'DETALLE',
+  BMEPTIPEVN IS 'TIPO EVENTO',
+  BMEPUSUEVN IS 'USUARIO EVENTO'
+);
+
+-- Descripción
+LABEL ON COLUMN METODOPAGB (
+  BMEPCODIGO TEXT IS 'CODIGO DE METODO PAGO',
+  BMEPFECEVN TEXT IS 'FECHA DEL EVENTO',
+  BMEPDESCRI TEXT IS 'DESCRIPCION DE METODO PAGO',
+  BMEPDETALE TEXT IS 'DETALLE DE METODO PAGO',
+  BMEPTIPEVN TEXT IS 'TIPO DE EVENTO',
+  BMEPUSUEVN TEXT IS 'USUARIO DEL EVENTO'
+);
+
+-- Comentarios
+COMMENT ON COLUMN METODOPAGB (
+  BMEPCODIGO IS 'CODIGO DE METODO PAGO',
+  BMEPFECEVN IS 'FECHA DEL EVENTO',
+  BMEPDESCRI IS 'DESCRIPCION DE METODO PAGO',
+  BMEPDETALE IS 'DETALLE DE METODO PAGO',
+  BMEPTIPEVN IS 'TIPO DE EVENTO: I-INSERCION, A-ACTUALIZACION, E-ELIMINACION',
+  BMEPUSUEVN IS 'USUARIO DEL EVENTO'
+);

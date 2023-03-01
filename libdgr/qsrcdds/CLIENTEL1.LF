@@ -1,0 +1,21 @@
+     A****************************************************************
+     A*                        ARCHIVO LOGICO                        *
+     A****************************************************************
+     A* Nombre Archivo: CLIENTEV1                                    *
+     A* No Cambio.....: ID-001                                       *
+     A* Responsable...: Danny García Reyes                           *
+     A* Fecha.........: Febrero 2023                                 *
+     A* Observaciones.: Creación del archivo lógico.                 *
+     A****************************************************************
+     A*
+     A          R RCLIENTE                  PFILE(*LIBL/CLIENTE)
+     A
+     A            CLIIDCLIE                 COLHDG('ID CLIENTE')
+     A            CLINOMCLI                 COLHDG('NOMBRE')
+     A            CLIAPECLI                 COLHDG('APELLIDO')
+     A            CLIFECNAC                 COLHDG('FECHA NACIMIENTO')
+     A            CLITELCLI                 COLHDG('TELEFONO')
+     A            CLIDIRCLI                 COLHDG('DIRECCION')
+     A            CLIEMACLI                 COLHDG('EMAIL')
+     A
+     A          K CLIIDCLIE

@@ -1,0 +1,47 @@
+**free
+Dcl-Ds CATP00201_DScategoryDetail Qualified;
+  categoryId          Char(5)  Inz;
+  categoryDescription Char(30) Inz;
+  categoryDetail      Char(50) Inz;
+End-Ds;
+
+Dcl-Ds CATP00201_DScategoryLogDetail Qualified;
+  categoryId          Char(5)   Inz;
+  eventDate           Timestamp Inz;
+  categoryDescription Char(30)  Inz;
+  categoryDetail      Char(50)  Inz;
+  eventType           Char(1)   Inz;
+  eventUser           Char(18)  Inz;
+End-Ds;
+
+Dcl-Pr CATP00201_getCategory ind;
+  @i_categoryId Char(5) Const;
+  @o_dsCategoryInfo LikeDs(CATP00201_DScategoryDetail);
+End-Pr;
+
+Dcl-Pr CATP00201_getAllCategories ind;
+  @i_filter Char(40) Const;
+End-Pr;
+
+Dcl-Pr CATP00201_getNextCategory ind;
+  @o_dsCategoryInfo LikeDs(CATP00201_DScategoryDetail);
+End-Pr;
+
+Dcl-Pr CATP00201_closeAllCategoriesCursor;
+End-Pr;
+
+Dcl-Pr CATP00201_insertCategory ind;
+  @i_dsCategoryInfo LikeDs(CATP00201_DScategoryDetail) Const;
+End-Pr;
+
+Dcl-Pr CATP00201_updateCategory ind;
+  @i_dsCategoryInfo LikeDs(CATP00201_DScategoryDetail) Const;
+End-Pr;
+
+Dcl-Pr CATP00201_deleteCategory ind;
+  @i_categoryId Char(5) Const;
+End-Pr;
+
+Dcl-Pr CATP00201_insertCategoryLog ind;
+  @i_dsCategoryLogInfo LikeDs(CATP00201_DScategoryLogDetail) Const;
+End-Pr;

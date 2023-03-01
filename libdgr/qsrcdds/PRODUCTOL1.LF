@@ -1,0 +1,19 @@
+     A****************************************************************
+     A*                        ARCHIVO LOGICO                        *
+     A****************************************************************
+     A* Nombre Archivo: PRODUCTOL1                                   *
+     A* No Cambio.....: ID-001                                       *
+     A* Responsable...: Danny García Reyes                           *
+     A* Fecha.........: Febrero 2023                                 *
+     A* Observaciones.: Creación del archivo lógico.                 *
+     A****************************************************************
+     A*
+     A          R RPRODUCTO                 PFILE(*LIBL/PRODUCTO)
+     A
+     A            PROIDPROD                 COLHDG('ID PRODUCTO')
+     A            PRONOMBRE                 COLHDG('NOMBRE PRODUCTO')
+     A            PROPRECIO                 COLHDG('PRECIO PRODUCTO')
+     A            PROSTOCKP                 COLHDG('STOCK PRODUCTO')
+     A            PROIDCATE                 COLHDG('ID CATEGORIA')
+     A
+     A          K PROIDPROD

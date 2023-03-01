@@ -1,0 +1,39 @@
+     A* Menú de Formato Libre: VENTAS01
+     A*%%TS  SD  20230227  224733  BCOINFDGR2  REL-V7R4M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3                  -
+     A                                             27 132 *DS4)
+     A                                      CHGINPDFT
+     A                                      INDARA
+     A                                      PRINT
+     A*
+     A          R VENTAS01
+     A*%%TS  SD  20230227  224733  BCOINFDGR2  REL-V7R4M0  5770-WDS
+     A                                      DSPMOD(*DS3)
+     A                                      LOCK
+     A                                      SLNO(01)
+     A                                      CLRL(*ALL)
+     A                                      ALWROL
+     A                                      CF03
+     A                                      HLPRTN
+     A                                      HOME
+     A                                      HELP
+     A                                  1 34'Menú: VENTAS01'
+     A                                      DSPATR(HI)
+     A                                  2 25'VENTA DE PRODUCTOS ELECTRÓNICOS'
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A                                  6 20'1. Mantenimiento de Categorías de -
+     A                                      Productos.'
+     A                                  7 20'2. Mantenimiento de Clientes.'
+     A                                  8 20'3. Mantenimiento de Métodos de Pag-
+     A                                      o.'
+     A                                  9 20'4. Mantenimiento de Productos.'
+     A                                 10 20'5. Nueva Venta.'
+     A                                 11 20'6. Consulta de Ventas.'
+     A                                 12 20'   ...'
+     A                                 13 19'89. Menú Principal'
+     A                                 14 19'90. Desconectar'
+     A* CMDPROMPT  No suprima esta especificación DDS.
+     A                                019  2'Número de opción:'
+     A                                      DSPATR(HI)

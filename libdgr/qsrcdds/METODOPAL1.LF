@@ -1,0 +1,17 @@
+     A****************************************************************
+     A*                        ARCHIVO LOGICO                        *
+     A****************************************************************
+     A* Nombre Archivo: METODOPAL1                                   *
+     A* No Cambio.....: ID-001                                       *
+     A* Responsable...: Danny García Reyes                           *
+     A* Fecha.........: Febrero 2023                                 *
+     A* Observaciones.: Creación del archivo lógico.                 *
+     A****************************************************************
+     A*
+     A          R RETODOPAGO                PFILE(*LIBL/METODOPAGO)
+     A
+     A            MEPCODIGO                 COLHDG('CODIGO')
+     A            MEPDESCRI                 COLHDG('DESCRIPCION')
+     A            MEPDETALE                 COLHDG('DETALLE')
+     A
+     A          K MEPCODIGO

@@ -1,0 +1,18 @@
+/*==================================================================*/
+/*@name.....: CATP002                                               */
+/*@version..: ID-001                                                */
+/*@author...: Danny García Reyes                                    */
+/*@since....: Febrero 2023                                          */
+/*@objective: Lógica de acceso a datos de Categorías y Bitácora de  */
+/*            Categorías.                                           */
+/*==================================================================*/
+STRPGMEXP PGMLVL(*CURRENT)
+  EXPORT SYMBOL("CATP00201_GETCATEGORY")
+  EXPORT SYMBOL("CATP00201_GETALLCATEGORIES")
+  EXPORT SYMBOL("CATP00201_GETNEXTCATEGORY")
+  EXPORT SYMBOL("CATP00201_CLOSEALLCATEGORIESCURSOR")
+  EXPORT SYMBOL("CATP00201_INSERTCATEGORY")
+  EXPORT SYMBOL("CATP00201_UPDATECATEGORY")
+  EXPORT SYMBOL("CATP00201_INSERTCATEGORYLOG")
+  EXPORT SYMBOL("CATP00201_DELETECATEGORY")
+ENDPGMEXP

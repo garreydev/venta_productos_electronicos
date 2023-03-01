@@ -1,0 +1,22 @@
+**free
+Dcl-C OPC1 '2=Modificar  4=Eliminar  5=Consultar';
+
+Dcl-C MSJ1 ' Ingresar ';
+
+Dcl-C MSJ2 ' Consultar ';
+
+Dcl-C MSJ3 ' Modificar ';
+
+Dcl-C MSJ4 ' Eliminar ';
+
+Dcl-C MSJ5 '¿Está seguro de eliminar el registro?';
+
+Dcl-C TEC1 'F3=Salir F5=Refrescar F6=Ingresar';
+
+Dcl-C TEC2 'F1=Agregar F12=Anterior ENTER=Validar';
+
+Dcl-C TEC3 'F12=Anterior';
+
+Dcl-C TEC4 'F1=Modificar F12=Anterior ENTER=Validar';
+
+Dcl-C TEC5 'F1=Eliminar F12=Cancelar';

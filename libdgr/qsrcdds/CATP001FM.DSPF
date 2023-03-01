@@ -1,0 +1,157 @@
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      INDARA
+     A          R PANTSF
+     A                                      SFL
+     A            FOPCION        1A  B  9  5
+     A            FCATIDCATE     5A     9  9
+     A            FCATDESCRI    30A     9 23
+     A            FCATDETALE    24A     9 55
+     A          R PANTSFC
+     A                                      SFLCTL(PANTSF)
+     A                                      SFLSIZ(14)
+     A                                      SFLPAG(13)
+     A  95                                  OVERLAY
+     A N51                                  SFLDSP
+     A N53                                  SFLDSPCTL
+     A  50                                  SFLCLR
+     A N52                                  SFLEND(*MORE)
+     A                                      CF03(03 'Salir')
+     A                                      CF05(05 'Renovar')
+     A                                      CF06(06 'Incluir')
+     A                                      CF12(12 'Cancelar')
+     A            PGM           10A  O  1  3
+     A                                  1 26'Venta de Productos Electrónicos'
+     A                                      DSPATR(HI)
+     A                                  1 69DATE(*JOB *YY)
+     A                                      EDTCDE(Y)
+     A                                  2  3USER
+     A                                  2 22'Mantenimiento de Categorías de Pro-
+     A                                      ductos'
+     A                                      DSPATR(HI)
+     A                                  2 71TIME
+     A                                  4  3'Teclee su opción y pulse Enter.'
+     A                                      COLOR(BLU)
+     A            FATITULO      70A  O  5  3COLOR(BLU)
+     A                                  6 16'Búsqueda:'
+     A                                      COLOR(BLU)
+     A            FABUSQUEDA    40A  B  6 26COLOR(WHT)
+     A                                  7  4'Opc  Id Categoría  Descripción    -
+     A                                                       Detalle'
+     A                                      DSPATR(HI)
+     A                                  8  3'-----------------------------------
+     A                                      ------------------------------------
+     A                                      -------'
+     A                                      DSPATR(HI)
+     A          R FUNCION
+     A  95                                  OVERLAY
+     A            FATECLAS      76A  O 23  3DSPATR(HI)
+     A                                      COLOR(BLU)
+     A            FAMENSAJES    76A  O 24  3DSPATR(HI)
+     A                                      COLOR(WHT)
+     A          R PANT01
+     A                                      WINDOW(1 3 21 73)
+     A                                      OVERLAY
+     A                                      WDWTITLE((*TEXT &TITULO) (*COLOR +
+     A                                      WHT) *CENTER)
+     A                                      CF01(01 'Agregar')
+     A                                      CF12(12 'Anterior')
+     A            TITULO        10A  P
+     A                                  2  2'Id Categoría..:'
+     A                                      DSPATR(HI)
+     A            PCATIDCATE     5A  O  2 19
+     A                                  3  2'Descripción...:'
+     A                                      DSPATR(HI)
+     A            PCATDESCRI    30A  B  3 19
+     A                                  4  2'Detalle.......:'
+     A                                      DSPATR(HI)
+     A            PCATDETALE    50A  B  4 19
+     A            FATECLAS2     70A  O 19  2COLOR(BLU)
+     A            FAMENSAJE2    70A  O 20  2COLOR(RED)
+     A          R PANT02
+     A                                      WINDOW(1 3 21 73)
+     A                                      OVERLAY
+     A                                      WDWTITLE((*TEXT &TITULO) (*COLOR +
+     A                                      WHT) *CENTER)
+     A                                      CF12(12 'Anterior')
+     A            TITULO        10A  P
+     A                                  2  2'Id Categoría..:'
+     A                                      DSPATR(HI)
+     A            PCATIDCATE     5A  O  2 19
+     A                                  3  2'Descripción...:'
+     A                                      DSPATR(HI)
+     A            PCATDESCRI    30A  O  3 19
+     A                                  4  2'Detalle.......:'
+     A                                      DSPATR(HI)
+     A            PCATDETALE    50A  O  4 19
+     A            FATECLAS2     70A  O 19  2COLOR(BLU)
+     A            FAMENSAJE2    70A  O 20  2COLOR(RED)
+     A          R PANT03
+     A                                      WINDOW(1 3 21 73)
+     A                                      OVERLAY
+     A                                      WDWTITLE((*TEXT &TITULO) (*COLOR WH-
+     A                                      T) *CENTER)
+     A                                      CF01(01 'Agregar')
+     A                                      CF12(12 'Anterior')
+     A            TITULO        10A  P
+     A                                  2  2'Id Categoría..:'
+     A                                      DSPATR(HI)
+     A            PCATIDCATE     5A  B  2 19
+     A  73                                  DSPATR(PC)
+     A                                  3  2'Descripción...:'
+     A                                      DSPATR(HI)
+     A            PCATDESCRI    30A  B  3 19
+     A                                  4  2'Detalle.......:'
+     A                                      DSPATR(HI)
+     A            PCATDETALE    50A  B  4 19
+     A            FATECLAS2     70A  O 19  1COLOR(BLU)
+     A            FAMENSAJE2    70A  O 20  1COLOR(RED)
+     A          R PANT04
+     A                                      KEEP
+     A                                      BLINK
+     A                                      OVERLAY
+     A                                      WINDOW(10 4 5 70)
+     A                                      WDWTITLE((*TEXT 'Aviso'))
+     A                                      WDWTITLE((*TEXT 'Aviso') (*COLOR WH-
+     A                                      T))
+     A                                      CF12(12 'Cancelar')
+     A                                      CF23(23 'ACEPTAR')
+     A            FAAVISO       68A  O  2  3
+     A                                  4  3'F12 = Cancelar         F23 = Confi-
+     A                                      rmar'
+     A                                      COLOR(BLU)
+     A          R PANT05
+     A                                      OVERLAY
+     A                                      WINDOW(1 3 21 73)
+     A                                      WDWTITLE((*TEXT &TITULO) (*COLOR WH-
+     A                                      T) *CENTER)
+     A                                      CF01(01 'Aprobar')
+     A                                      CF12(12 'Anterior')
+     A            TITULO        10A  P
+     A                                  2  2'Id Categoría..:'
+     A                                      DSPATR(HI)
+     A            PCATIDCATE     5A  O  2 19
+     A                                  3  2'Descripción...:'
+     A                                      DSPATR(HI)
+     A            PCATDESCRI    30A  O  3 19
+     A                                  4  2'Detalle.......:'
+     A                                      DSPATR(HI)
+     A            PCATDETALE    50A  O  4 19
+     A            FATECLAS2     70A  O 19  1COLOR(BLU)
+     A            FAMENSAJE2    70A  O 20  1COLOR(RED)
+     A          R MESSAGE
+     A                                      KEEP
+     A                                      BLINK
+     A                                      OVERLAY
+     A                                      WINDOW(10 4 5 70)
+     A                                      WDWTITLE((*TEXT 'Mensaje') (*COLOR -
+     A                                      WHT))
+     A            FAMESSAGE     68A  O  2  2
+     A                                  4 28'Enter = Continuar'
+     A                                      COLOR(BLU)
+     A*%%RS+<record-sequences>
+     A*%%RS+ <sequence name="NUEVO">
+     A*%%RS+  <device type="display" width="80" height="24" />
+     A*%%RS+  <record-write record-format="PANTSF" />
+     A*%%RS+  <record-write record-format="PANTSFC" />
+     A*%%RS+ </sequence>
+     A*%%RS </record-sequences>

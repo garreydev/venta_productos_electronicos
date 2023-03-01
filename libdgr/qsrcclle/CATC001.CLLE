@@ -1,0 +1,13 @@
+/*----------------------------------------------------------------------------*/
+/* @name.....: CATC001                                                        */
+/* @version..: ID-001                                                         */
+/* @author...: Danny García Reyes                                             */
+/* @since....: Febrero 2023                                                   */
+/* @objective: Ejecuta el programa CATP001 - Mantenimiento de Tabla Categorías*/
+/*----------------------------------------------------------------------------*/
+ INICIO:     PGM
+             DCL        VAR(&CODACCION) TYPE(*CHAR) STG(*AUTO) LEN(01) VALUE('1')
+
+             CALL       PGM(CATP001) PARM(&CODACCION)
+
+ FINAL:      ENDPGM

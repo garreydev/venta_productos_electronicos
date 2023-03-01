@@ -1,0 +1,17 @@
+     A****************************************************************
+     A*                        ARCHIVO LOGICO                        *
+     A****************************************************************
+     A* Nombre Archivo: CATEGORIL1                                   *
+     A* No Cambio.....: ID-001                                       *
+     A* Responsable...: Danny García Reyes                           *
+     A* Fecha.........: Febrero 2023                                 *
+     A* Observaciones.: Creación del archivo lógico.                 *
+     A****************************************************************
+     A*
+     A          R RCATEGORIA                PFILE(*LIBL/CATEGORIA)
+     A
+     A            CATIDCATE                 COLHDG('ID CATEGORIA')
+     A            CATDESCRI                 COLHDG('DESCRIPCION')
+     A            CATDETALE                 COLHDG('DETALLE')
+     A
+     A          K CATIDCATE
